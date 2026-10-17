@@ -13,6 +13,12 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: AMO
+      url: https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/
+    permissions:
+      contents: read
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v7
